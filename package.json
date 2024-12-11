@@ -6,9 +6,12 @@
   },
   "dependencies": {
     "next": "^15.0.4",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
     "nextra": "^3.2.4",
-    "nextra-theme-docs": "^3.2.4"
+    "nextra-theme-docs": "^3.2.4",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "22.10.1"
   }
 }
