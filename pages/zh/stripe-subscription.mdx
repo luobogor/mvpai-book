@@ -1,0 +1,29 @@
+把积分功能做了
+- 月度订阅
+- 年度订阅
+- 修改订阅
+- 取消订阅，仅做从下月开始取消订阅
+- 退款：一般情况让用户发邮件发起退款，不做 API 让用户直接退款
+
+
+修改订阅
+1. 修改允许用户升级订阅 https://dashboard.stripe.com/test/settings/billing/portal ，并将可切换的产品添加到列表
+[payment-1.png](/images/payment-1.png)
+2. api create billing portal
+3. 两种方式：
+  - 方法1通过面板获取用户 portal 管理链接 [payment-2.png](/images/payment-2.png)
+  - 方法2，通过 api 创建 portal 链接
+```
+{
+  "error": {
+    "message": "Unrecognized request URL (POST: /p/session/test_YWNjdF8xUUlpRGpDZjlTaGZOdEZ6LF9STldZTHB5Z0pxdEFBc09LMEVZS0N5RW1IMjc5S1Ju0100XugmxxNL). Please see https://stripe.com/docs or we can help at https://support.stripe.com/.",
+    "type": "invalid_request_error"
+  }
+}
+```
+
+4. 只有升级会触发 invoice.paid、customer.subscription.updated，降级只会触发 customer.subscription.updated
+
+
+升级、降级订阅文档
+https://docs.stripe.com/billing/subscriptions/upgrade-downgrade

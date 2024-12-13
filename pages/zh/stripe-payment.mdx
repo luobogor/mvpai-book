@@ -1,0 +1,14 @@
+看下要不要用 client_reference_id 作为 session id
+stripe trigger checkout.session.completed
+查看监听初始化可以知道 secrect
+
+
+## Stripe CLI
+监听：
+stripe listen --forward-to localhost:3013/api/webhook/stripe
+
+触发：
+stripe trigger checkout.session.completed \
+--add checkout_session:metadata.priceId=price_1QU1XLCf9ShfNtFzOc6xOULH \
+--add checkout_session:metadata.userId=cm4f2g5yc0000trryet4eeevr \
+

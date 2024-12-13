@@ -1,0 +1,26 @@
+促销码
+https://docs.stripe.com/payments/checkout/discounts
+https://docs.stripe.com/billing/subscriptions/coupons
+https://docs.stripe.com/stripe-cli
+
+Coupon 也可以限制次数！让我再次完整地说明：
+
+🎯 Stripe 折扣机制最终版：
+
+Coupon:
+- 定义折扣规则（打折/减额）
+- 可以限制总使用次数
+- 但不能作为码分享给用户
+- 一般用于后台直接应用
+
+Promotion Code:
+- 必须基于 Coupon 创建
+- 生成实际优惠码（如"HAPPY2024"）
+- 可以单独限制这个码的使用次数
+- 方便分享和营销
+
+例子：
+- 黑五所有商品打 8 折，使用 Coupon。
+- 基于这个 Coupon 创建多个 Promotion Code，Product Hunt 发布推广，"使用 YOUTUBE20 获得 20% 折扣"
+
+#stripe #优惠码
