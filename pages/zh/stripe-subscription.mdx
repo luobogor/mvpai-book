@@ -25,5 +25,38 @@
 4. 只有升级会触发 invoice.paid、customer.subscription.updated，降级只会触发 customer.subscription.updated
 
 
-升级、降级订阅文档
+升级、降级订阅文档。这是手动调用 API 改订阅，用不了。
 https://docs.stripe.com/billing/subscriptions/upgrade-downgrade
+
+
+```
+事件排序
+Stripe 不保证能够按事件生成的顺序来发送事件。例如，创建订阅时可能会生成以下事件：
+
+customer.subscription.created
+invoice.created
+invoice.paid
+charge.created（如果有收款）
+
+您的端点不应期望上述事件按照此顺序发送，而是应该来一个处理一个。您也可以用 API 来获取任何丢失的对象（例如，您可以使用来自 invoice.paid 的信息获取账单、收款及订阅对象——如果您恰好是先收到的此事件的话）。
+```
+
+默认规则是按比例算出要退的原订阅，再加上新订阅，计算两个的差价。比如：
+```
+Remaining time on X Premium Plus after 12 Dec 2024
+2024 年 12 月 12 日之后 X Premium Plus 的剩余时间
+¥19,773
+
+
+Unused time on X Premium (with 40.0% off) after 12 Dec 2024
+2024 年 12 月 12 日之后 X Premium 的未使用时间（享受 40.0% 折扣）
+¥5,932
+
+收费金额：19773-5932=13841
+```
+使用 bill_reason 判断
+
+
+## 退款
+- 截图dashboard立即取消订阅
+- webhook customer.subscription.deleted 可以同时监听未来取消和立即取消，在这个勾子取消用户访问权限
