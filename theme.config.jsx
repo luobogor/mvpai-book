@@ -1,7 +1,7 @@
 export default {
-  logo: <span>My Nextra Documentation</span>,
+  logo: <span>MVPAI 全栈开发入门技术手册</span>,
   project: {
-    link: 'https://github.com/shuding/nextra'
+    link: 'https://github.com/luobogor/mvpai-book'
   },
   i18n: [
     { locale: 'en', name: 'English' },
