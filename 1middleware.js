@@ -1,5 +1,7 @@
 export { middleware } from 'nextra/locales'
 
+// TODO，public 也被重定向了
+
 export const config = {
   // Matcher ignoring `/_next/` and `/api/`
   matcher: [

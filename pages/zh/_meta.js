@@ -10,4 +10,14 @@ export default {
   'stripe-subscription': {
     display: 'hidden'
   },
+  about: {
+    "title": "更多",
+    "type": "menu",
+    "items": {
+      "podwise": {
+        "title": "MVPAI",
+        "href": "https://mvpai.dev"
+      },
+    }
+  }
 }

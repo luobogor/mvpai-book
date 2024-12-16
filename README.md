@@ -1,10 +1,29 @@
-## 大纲
-- 如何快速搭建一个落地页
-- Prisma 初探
-- 使用 Next Intl 集成多语言
-- Next-Auth 使用：登录流程图、与数据库用户打通、集成 google oauth
-- Blog: nextjs、remote-mdx、collections 对比 
-- Blog: 使用 collections、@tailwindcss/typography 搭建博客
-- Stripe: 一次性支付
-- Stripe: 订阅支付
-- 使用 AI 生成落地页
+# MVPAI 全栈开发入门技术手册
+
+## 关于本书
+本书是 [MVPAI](https://mvpai.dev) 技术的入门指南。跟着本书，你将学会如何构建一个自己的 MVPAI。
+
+[MVPAI](https://mvpai.dev) 是一个基于 AI 的 Next.js SaaS 快速开发模板，帮助开发者在几分钟内启动 SaaS 项目。通过预构建组件和 AI 辅助功能，MVPAI 加速开发过程，让用户专注于核心业务逻辑。它支持现代技术栈，包括身份认证、支付集成和多语言支持，助力用户快速构建高质量的 MVP。
+
+### 为什么写这本小册子？
+1. 帮助用户快速熟悉模板的技术栈
+2. 记录开发过程中的问题，积累知识，便于复习
+3. 为产品宣传提供支持
+
+## 关于作者
+我是 [Luobogor](https://x.com/luobogooooo)，专注于海外市场的独立开发者。如果本教程对您有帮助，欢迎请我喝杯咖啡。
+
+<img src="https://cdn.sanity.io/images/ntncowsx/production/ef19529d61d4a646522d1b2f5b9f7e574f40aa2a-691x691.jpg"
+     alt="buy me a coffee"
+     width="400"
+     height="400"/>
+
+## 版权声明
+本作品采用 CC BY-NC-ND 4.0 许可。
+
+您可以自由分享、复制和传播本作品的内容，但需遵守以下条件：
+- 署名 — 您必须给予适当的署名，提供指向本许可协议的链接，并标明是否对原作品进行了修改。署名方式应合理，但不得暗示许可人对您或您使用本作品的认可。
+- 非商业性使用 — 您不得将本作品用于商业目的。
+- 禁止演绎 — 如果您混合、转换或基于本作品创作，您不得分发修改后的作品。
+
+违反上述任何条件将构成对许可协议的违背，并可能受到法律处罚。
