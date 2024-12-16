@@ -6,21 +6,25 @@ export default {
   head: () => {
     const { asPath, defaultLocale, locale } = useRouter()
     const { frontMatter } = useConfig()
+
     const url =
       'https://book.mvpai.dev' +
       (defaultLocale === locale ? asPath : `/${locale}${asPath}`)
 
+    const title = frontMatter.title + " – MVPAI Book" || 'MVPAI Book'
+
     return (
       (
         <>
+          <title>{ title }</title>
           <meta property="og:url" content={ url }/>
-          <meta property="og:title" content={ frontMatter.title + " – MVPAI Book" || 'MVPAI Book' }/>
+          <meta property="og:title" content={ title }/>
           <meta
             property="og:description"
             content={ frontMatter.description || 'MVPAI 全栈开发入门技术手册' }
           />
           <meta property="og:image"
-                content="https://github.com/hardhackerlabs/book/blob/main/public/attachments/other/ARR.png?raw=true"/>
+                content="https://book.mvpai.dev/og.png"/>
           <script dangerouslySetInnerHTML={ {
             __html: `
           (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -58,5 +62,5 @@ export default {
       </span>
     ),
   },
-  faviconGlyph: "🤖",
+  faviconGlyph: '/favicon.ico',
 }
