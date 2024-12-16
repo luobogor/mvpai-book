@@ -7,6 +7,9 @@ export default {
   'stripe-payment': {
     display: 'hidden'
   },
+  'cover': {
+    display: 'hidden'
+  },
   'stripe-subscription': {
     display: 'hidden'
   },
