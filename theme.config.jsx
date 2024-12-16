@@ -12,16 +12,18 @@ export default {
       (defaultLocale === locale ? asPath : `/${locale}${asPath}`)
 
     const title = frontMatter.title + " – MVPAI Book" || 'MVPAI Book'
+    const content = frontMatter.description || 'MVPAI 全栈开发入门技术手册'
 
     return (
       (
         <>
           <title>{ title }</title>
+          <meta name="description" content={ content }/>
           <meta property="og:url" content={ url }/>
           <meta property="og:title" content={ title }/>
           <meta
             property="og:description"
-            content={ frontMatter.description || 'MVPAI 全栈开发入门技术手册' }
+            content={ content }
           />
           <meta property="og:image"
                 content="https://book.mvpai.dev/og.png"/>
