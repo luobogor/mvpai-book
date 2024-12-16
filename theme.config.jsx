@@ -25,6 +25,8 @@ export default {
           />
           <meta property="og:image"
                 content="https://book.mvpai.dev/og.png"/>
+          <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16"/>
+          <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32"/>
           <script dangerouslySetInnerHTML={ {
             __html: `
           (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -62,5 +64,4 @@ export default {
       </span>
     ),
   },
-  faviconGlyph: '/favicon.ico',
 }
